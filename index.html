@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UI & Layout</title>
+</head>
+<body>
+  <section class="loading-section">
+    <div class="container text-align">
+        <div class="bouncing-ball">
+          <div class="ball"></div>
+        </div>
+
+        <div class="spinner">
+          <div class="curve-top-left"></div>
+          <div class="curve-bottom-right"></div>
+          <div class="curve-top-right"></div>
+          <div class="curve-bottom-left"></div>
+          <div class="center-circle"></div>
+        </div>
+
+        <h1 class="h1 loading">LOADING<span class="span dot-one"> .</span><span class="span dot-two"> .</span><span class="span dot-three"> .</span></h1>
+    </div>
+  </section>
+    <!-- end of loading animations -->
+
+    <section class="btn-and-link">
+      <div class="container text-align">
+        <div class="links">
+            <div class="container text-align">
+                <p>Lorem ipsum dolor sit amet <a href="#" class="fade-in-bg">consectetur</a> adipisicing elit. Ducimus maiores distinctio eveniet dicta laboriosam corporis ipsa deserunt rem magnam ullam iste <a href="#" class="underline-from-left">consectetur</a> velit beatae consequuntur sint, aspernatur temporibus fuga fugit, placeat culpa aut doloribus. Sit optio saepe quisquam maiores totam, ducimus, itaque cum at sed deserunt debitis ipsa deleniti laboriosam!
+                Lorem ipsum dolor sit amet <a href="#" class="underline-from-center">consectetur</a> adipisicing elit. Aperiam ratione optio, quasi doloribus provident, unde necessitatibus quisquam et modi aut odit illo vitae sed consequatur reiciendis! Deserunt at ea rem reiciendis corporis quidem molestiae, ut, perferendis soluta illo deleniti <a href="#" class="underline-from-right">consectetur</a> repellendus placeat quas animi, dignissimos cupiditate optio impedit quis fugiat distinctio quibusdam aspernatur itaque? Quibusdam nihil repellat rem sit id minima, reiciendis quasi? Distinctio eveniet illo deleniti in qui repellat!</p>
+                <p>Lorem ipsum dolor sit amet <a href="#" data-linktext="consectetur" class="slide-from-left">consectetur</a> adipisicing elit. Nemo <a href="#" data-linktext="consectetur" class="slide-from-right">consectetur</a> odit a? Aut, cum, at excepturi iure harum nesciunt accusamus rem et corporis quam velit facilis eius odit cupiditate laudantium tempore. Ullam quasi <a href="#" data-linktext="recusandae" class="slide-from-top">recusandae</a> veniam doloribus expedita vitae iste fugiat atque inventore blanditiis accusamus in dolorum cupiditate, similique omnis nihil perspiciatis corrupti sequi magni distinctio. Quidem, dignissimos similique <a href="#" data-linktext="recusandae" class="slide-from-bottom">recusandae </a>officia accusantium nulla, eos ducimus ipsum pariatur quae consequuntur quisquam, dolor odio enim quas expedita quos aspernatur ex vel impedit? Error, deserunt? Repellat dolores a ab pariatur! Debitis rerum iusto voluptatibus.</p>
+            </div>
+        </div>
+  
+        <div class="buttons">
+            <button class="slide-from-left">Slide from left</button>
+            <button class="slide-from-right">Slide from right</button>
+            <button class="slide-from-top">Slide from top</button>
+            <button class="slide-from-bottom">Slide from bottom</button>
+            
+            <button class="grow-box">Grow box</button>
+            <button class="grow-ellipse">Grow ellipse</button>
+            <button class="grow-skew-forward">Grow skew</button>
+            <button class="grow-skew-backward">Grow skew</button>
+            <button class="grow-spin">Grow spin</button>
+        </div>
+    </div>
+    </section>
+  <!-- end of btns and links -->
+
+  <section class="height-columns">
+    <div class="container">
+       
+      <div class="flex-bg text-align">
+      <main class="main">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum unde ad voluptate, non est sit dolorum! Mollitia consequuntur labore eos, cum animi quis libero reiciendis non dolorum impedit obcaecati molestias voluptatibus numquam vero aspernatur error natus esse. Eum, cum beatae. Odio, tempore vel. Rem temporibus fuga, voluptatem vel deserunt libero?</p>
+          <p>Provident doloribus obcaecati consequatur exercitationem, sapiente facilis mollitia ipsa nemo! Nemo odit quod repudiandae molestias est voluptatibus corrupti officiis aperiam, dolor laboriosam, ipsa tempora labore a itaque molestiae distinctio cupiditate consequatur pariatur non voluptas! Vel, adipisci, quos sed error est porro cumque incidunt dicta illo dolorem enim nobis neque voluptas!</p>
+      </main>
+
+          <aside class="sidebar left">
+              <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsam aperiam suscipit dolorum cupiditate nulla eaque quod magnam molestias reprehenderit.</p>
+          </aside>
+          <aside class="sidebar right">
+              <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsam aperiam suscipit dolorum cupiditate nulla eaque quod magnam molestias reprehenderit.</p>
+          </aside>
+      </div>
+  <!-- End of using flex for equal height columns -->
+      <div class="div">
+          <p>&nbsp;</p> 
+          <h1>Tooltips</h1>
+
+          <div>
+          <a href="https://www.twitter.com" target="_blank" class="tooltip">
+              <i class="fa fa-twitter"></i><span class="tip">Follow Us On Twitter</span>
+          </a>
+          </div>
+          <div>
+          <a href="https://www.facebook.com" target="_blank" class="tooltip">
+              <i class="fa fa-facebook"></i><span class="tip">Like Our Facebook Page</span>
+          </a>
+          </div>
+      
+          <p>&nbsp;</p>
+      
+          <h2>Citations</h2>
+  
+          <p>My father had a small estate in Nottinghamshire: <sup><a href="#footnote">[1]</a> <span><cite><a href="https://www.gutenberg.org/files/829/829-h/829-h.htm" target="_blank">Gulliver's Travels </a></cite> by Jonathan Swift, 1726</span></sup> I was the third of five sons. He sent me to Emanuel College in Cambridge at fourteen years old, where I resided three years, and applied myself close to my studies; but the charge of maintaining me,<sup>[2] <span>Part I: A Voyage to Lilliput</span></sup> although I had a very scanty allowance, being too great for a narrow fortune, I was bound apprentice to Mr. James Bates,<sup>[3] <span>Part II: A Voyage to Brobdingnag</span></sup> an eminent surgeon in London, with whom I continued four years.</p>
+      
+          <div class="footnotes">
+          <p id="footnote">1. ^ If you need footnotes this works too</p>
+          <p>2. ^ Another example footnote for demonstration purposes</p>
+          <p>3. ^ One more demonstrative footnote here</p>
+          </div>
+      </div>
+      <!-- end of tooltips and citation  -->
+
+      <div class="div">
+          <div id="one" class="notification">
+              <div class="content">
+                <p>This is the "Success" notification's text content</p>
+                <div class="close"><a href="#">Close</a></div>
+              </div>
+          </div>
+            
+          <div id="two" class="notification warning">
+              <div class="content">
+                  <p>This is the "Warning" notification's text content</p>
+                  <div class="close"><a href="#">Close</a></div>
+              </div>
+          </div>
+
+          <p><a href="#infopanel" class="open_modal">Open Modal</a>
+              <div id="infopanel" class="modal">
+                <div class="content">
+                  <h2>Modal Panel</h2>
+                  <p>This panel could provide information or display images.</p>
+                  <p>When you're done click the X button to close.</p>
+                  <div class="close"><a href="#">Close</a></div>
+                </div>
+              </div>
+            </p>
+          
+            <p><a href="#one" class="open_notification">Open "Success" Notification</a></p>
+            <p><a href="#two" class="open_notification">Open "Warning" Notification</a></p>
+          
+      </div>
+  </div>
+  </section>
+  <!-- end of equal height columns -->
+
+  <section class="menu">
+    <div class="container wrapper">
+      <input type="checkbox" id="open-menu" class="open-menu">
+    
+      <label for="open-menu" class="burger"><i class="fa fa-bars"></i>Open Menu</label>
+    
+      <nav>
+    
+        <div class="menu-item">
+          <a href="#design">
+            <i class="fa fa-paint-brush"></i>
+            <p>Design</p>
+          </a>
+        </div>
+    
+        <div class="menu-item">
+          <a href="#code">
+            <i class="fa fa-code"></i>
+            <p>Coding</p>
+          </a>
+        </div>
+    
+        <div class="menu-item">
+          <a href="#ecommerce">
+            <i class="fa fa-credit-card"></i>
+            <p>E-Commerce</p>
+          </a>
+        </div>
+    
+        <div class="menu-item">
+          <a href="#marketing">
+            <i class="fa fa-bullhorn"></i>
+            <p>Marketing</p>
+          </a>
+        </div>
+    
+      </nav>
+    
+</div>
+  </section>
+  <!-- end of menu style -->
+
+  <section class="cube-section">
+    <div class="container wrap">
+      <input type="radio" name="rotate-switches" id="rotate" checked class="rotate">
+      <label for="rotate" class="rotate-label">Auto</label>
+    
+      <input type="radio" name="rotate-switches" id="front" class="rotate">
+      <label for="front" class="rotate-label">Front</label>
+    
+      <input type="radio" name="rotate-switches" id="left" class="rotate">
+      <label for="left" class="rotate-label">Left</label>
+    
+      <input type="radio" name="rotate-switches" id="back" class="rotate">
+      <label for="back" class="rotate-label">Back</label>
+    
+      <input type="radio" name="rotate-switches" id="right" class="rotate">
+      <label for="right" class="rotate-label">Right</label>
+    
+      <input type="radio" name="rotate-switches" id="top" class="rotate">
+      <label for="top" class="rotate-label">Top</label>
+    
+      <input type="radio" name="rotate-switches" id="bottom" class="rotate">
+      <label for="bottom" class="rotate-label">Bottom</label>
+    
+      <div class="perspective">
+    
+        <div class="cube">
+          <div class="front">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/KvXaLU9.jpg">
+          </div>
+          <div class="back">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/BidkJi1.jpg">
+          </div>
+          <div class="top">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cJhZD8u.jpg">
+          </div>
+          <div class="bottom">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/fnPnoxH.jpg">
+          </div>
+          <div class="left">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/FyVATby.jpg">
+          </div>
+          <div class="right">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/WkBpzLf.jpg">
+          </div>
+        </div>
+    
+      </div>
+    
+    </div>
+  </section>
+</body>
+</html>

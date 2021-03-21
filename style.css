@@ -1,0 +1,1188 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+box-sizing: border-box;
+}
+
+:root {
+    --primary: #a323c2;
+    --white: #fff;
+    --black: #000;
+    --secondary: #34495e;
+    --blue: #3498db;
+    --white: #ffffff;
+}
+
+body {
+font-family: 'PT Sans', sans-serif;
+overflow-y: scroll;
+}
+
+
+/*=============================================
+=            Loading animations            =
+=============================================*/
+
+
+
+/*=====  End of Loading animations  ======*/
+.loading-section{
+height: 100vh;
+background: #a323c2;
+color: #fff;
+
+}
+
+.h1.loading {
+font-size: 3em;
+font-weight: 400;
+margin-left: 3rem;
+}
+
+.span[class^='dot-'] {
+opacity: 0;
+}
+
+.dot-one {
+animation: dot-one 2s infinite linear;
+}
+
+.dot-two {
+animation: dot-two 2s infinite linear;
+}
+
+.dot-three {
+animation: dot-three 2s infinite linear;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+
+.text-align {
+text-align: center;
+}
+
+.bouncing-ball {
+position: relative;
+width: 4rem;
+margin: 0 auto;
+height: 12rem;
+}
+
+.ball {
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+background: #fff;
+position: absolute;
+top: 0;
+animation: bounce 1s infinite;
+}
+
+.spinner {
+position: relative;
+width: 6rem;
+height: 6rem;
+margin: 6rem auto;
+}
+
+div[class^='curve-'] {
+position: absolute;
+transform: rotate(135deg);
+animation: spin 4s infinite;
+}
+
+.curve-top-left {
+width: 3rem;
+height: 3rem;
+border-top: 0.5rem solid #fff;
+border-left: 0.5rem solid #fff;
+border-top-left-radius: 200%;
+top: 0;
+left: 0;
+transform-origin: 100% 100%;
+}
+
+.curve-bottom-right {
+width: 3rem;
+height: 3rem;
+border-bottom: 0.5rem solid #fff;
+border-right: 0.5rem solid #fff;
+border-bottom-right-radius: 200%;
+bottom: 0;
+right: 0;
+transform-origin: 0% 0%;
+}
+
+.curve-top-right {
+width: 2rem;
+height: 2rem;
+border-top: 0.5rem solid #fff;
+border-right: 0.5rem solid #fff;
+border-top-right-radius: 200%;
+top: 1rem;
+right: 1rem;
+transform-origin: 0% 100%;
+}
+
+.curve-bottom-left {
+width: 2rem;
+height: 2rem;
+border-bottom: 0.5rem solid #fff;
+border-left: 0.5rem solid #fff;
+border-bottom-left-radius: 200%;
+bottom: 1rem;
+left: 1rem;
+transform-origin: 100% 0%;
+}
+
+.center-circle {
+width: 1.5rem;
+height: 1.5rem;
+background: #fff;
+border-radius: 50%;
+position: absolute;
+top: 2.25rem;
+left: 2.25rem;
+animation: pulse 2s infinite;
+}
+
+/*=============================================
+=            Keyframes            =
+=============================================*/
+@keyframes dot-one {
+0% {
+    opacity: 0;
+}
+15% {
+    opacity: 0;
+}
+25% {
+    opacity: 1;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@keyframes dot-two {
+0% {
+    opacity: 0;
+}
+40% {
+    opacity: 0;
+}
+50% {
+    opacity: 1;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@keyframes dot-three {
+0% {
+    opacity: 0;
+}
+65% {
+    opacity: 0;
+}
+75% {
+    opacity: 1;
+}
+100% {
+    opacity: 1;
+}
+}
+
+@keyframes bounce {
+0% {
+    top: 0;
+    animation-timing-function: ease-in;
+}
+34% {
+    height: 4rem;
+    width: 4rem;
+}
+35% {
+    top: 12rem;
+    height: 3rem;
+    width: 4.3rem;
+    animation-timing-function: ease-out;
+}
+45% {
+    height: 4rem;
+    width: 4rem;
+}
+90% {
+    top: 0;
+}
+100% {
+    top: 0;
+}
+}
+
+@keyframes spin {
+0% {
+    transform: rotate(135deg);
+    opacity: 1;
+}
+25% {
+    opacity: 0.75;
+}
+50% {
+    transform: rotate(675deg);
+    opacity: 1;
+}
+75% {
+    opacity: 0.75;
+}
+100% {
+    transform: rotate(135deg);
+    opacity: 1;
+}
+}
+
+@keyframes pulse {
+0% {
+    opacity: 1;
+}
+50% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+
+
+
+/*=====  End of Keyframes  ======*/
+
+/*=============================================
+=            Hover buttons            =
+=============================================*/
+.btn-and-link {
+    height: 50vh;
+    color: #000;
+    padding: 6rem 0;
+}
+
+a {
+    color: var(--primary);
+    }
+    
+    a.fade-in-bg {
+    text-decoration: none;
+    padding: 0 0.25rem 0.05rem;
+    border-bottom: 0.05rem dotted var(--primary);
+    transition: all 0.5s;
+    }
+    
+    a.fade-in-bg:hover {
+    background: var(--primary);
+    color: var(--white);
+    transition: all 0.5s;
+    }
+    
+    a[class^="slide"] {
+    text-decoration: none;
+    padding: 0 0.25rem;
+    border-bottom: 0.05rem dotted var(--primary);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    }
+    
+    a[class^="slide"]::after {
+    content: attr(data-linktext);
+    background: var(--primary);
+    color: var(--white);
+    position: absolute;
+    display: block;
+    text-align: center;
+    transition: all 0.5s;
+    }
+    
+    a[class^="slide"]:hover {
+    border-bottom: 0.05rem solid var(--primary);
+    }
+    
+    a[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+    }
+    
+    a.slide-from-left::after {
+    top: 0;
+    right: 100%;
+    left: -100%;
+    }
+    
+    a.slide-from-right::after {
+    top: 0;
+    right: -100%;
+    left: 100%;
+    }
+    
+    a.slide-from-top::after {
+    top: -100%;
+    bottom: 100%;
+    }
+    
+    a.slide-from-bottom::after {
+    top: 100%;
+    bottom: -100%;
+    }
+    
+    a.fade-in-underline {
+    text-decoration: none;
+    padding: 0 0.1rem 0.05rem;
+    border-bottom: 0.1rem solid var(--white);
+    transition: all 0.5s;
+    }
+    
+    a.fade-in-underline:hover {
+    border-bottom: 0.1rem solid var(--primary);
+    transition: all 0.5s;
+    }
+    
+    a[class^='underline'] {
+    text-decoration: none;
+    padding: 0 0.1rem 0.05rem;
+    position: relative;
+    }
+    
+    a[class^='underline']::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    border-bottom: 0.1rem solid var(--primary);
+    transition: all 0.5s;
+    }
+    
+    a[class^='underline']:hover::after {
+    transition: all 0.5s;
+    }
+    
+    a.underline-from-left::after {
+    left: 0;
+    right: 100%;
+    }
+    
+    a.underline-from-left:hover::after {
+    right: 0;
+    }
+    
+    a.underline-from-right::after {
+    right: 0;
+    left: 100%;
+    }
+    
+    a.underline-from-right:hover::after {
+    left: 0;
+    }
+    
+    a.underline-from-center::after {
+    right: 50%;
+    left: 50%;
+    }
+    
+    a.underline-from-center:hover::after {
+    right: 0;
+    left: 0;
+    }
+  
+  
+  /*=====  End of Hover Links  ======*/
+  
+  
+  /*=============================================
+  =            Hover Buttons            =
+  =============================================*/
+  
+  button {
+    background: var(--primary);
+    color: var(--white);
+    border: 0.2rem solid var(--primary);
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: var(--primary);
+  }
+  
+  button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+    display: block;
+  }
+  
+  button[class^="slide"]::after {
+    transition: all 0.5s;
+  }
+  
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  
+  button.slide-from-left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
+  
+  button.slide-from-right::after {
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+  }
+  
+  button.slide-from-top::after {
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+  }
+  
+  button.slide-from-bottom::after {
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+  }
+  
+  button[class^="grow"]::after {
+    transition: all 0.5s ease;
+  }
+  
+  button[class^="grow"]:hover::after {
+    transition: all 0.5s ease-out;
+  }
+  
+  button.grow-box::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+  }
+  
+  button.grow-box:hover::after {
+    transform: scale(1, 1);
+  }
+  
+  button.grow-ellipse::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8rem;
+    transform: scale(0, 0);
+  }
+  
+  button.grow-ellipse:hover::after {
+    transform: scale(1, 1);
+  }
+  
+  button.grow-skew-forward::after {
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+  }
+  
+  button.grow-skew-forward:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+  }
+  
+  button.grow-skew-backward::after {
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(45deg) scale(0, 1);
+  }
+  
+  button.grow-skew-backward:hover::after {
+    transform: skewX(45deg) scale(1, 1);
+  }
+  
+  button.grow-spin::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+  }
+  
+  button.grow-spin:hover::after {
+    transform: scale(1, 1) rotate(0deg);
+  }
+  
+  
+  
+  /*=====  End of Hover Buttons  ======*/
+  
+  
+  
+
+
+/*=====  End of Hover buttons  ======*/
+
+
+/*=============================================
+=            Equal Height Columns            =
+=============================================*/
+.height-columns {
+  height: 100vh;
+  padding-top: 25rem;
+}
+
+.text-align {
+  text-align: center;
+  }
+  
+  .flex-bg {
+    display: flex;
+  }
+  
+  .flex-bg .sidebar {
+    width: 20%;
+    padding: 1rem 2rem;
+    color: var(--white);
+  }
+  
+  .flex-bg main {
+    width: 60%;
+    padding: 1rem 2rem;
+    order: 2;
+    background: var(--white);
+  }
+  
+  .flex-bg .left {
+    order: 1;
+    background: var(--primary);
+  }
+  
+  .flex-bg .right {
+    order: 3;
+    background: var(--secondary);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .flex-bg {
+      flex-wrap: wrap;
+    }
+    .flex-bg main {
+      width: 100%;
+      order: 1;
+    }
+    .flex-bg .sidebar {
+      width: 50%;
+    }
+    .flex-bg .left {
+      order: 2;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .flex-bg .sidebar {
+      width: 100%;
+    }
+  }
+  
+  
+  /*=============================================
+  =            Tootltips and Citations            =
+  =============================================*/
+  
+  
+  a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+  
+  .fa {
+    font-size: 4rem;
+    margin: 1rem;
+  }
+  
+  .fa-twitter {
+    color: #00b0ed;
+  }
+  
+  .fa-facebook {
+    color: #3b5998;
+  }
+  
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip:hover .tip {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0.5rem;
+    transition: all 0.5s;
+  }
+  
+  .tip {
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    bottom: 50%;
+    padding: 1rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+    font-weight: normal;
+    background: var(--secondary);
+    border-radius: 1rem;
+    color: var(--white);
+    transition: all 0.5s;
+  }
+  
+  .tip::before {
+    content: '';
+    border-style: solid;
+    border-width: 0.5rem 0.6rem 0.5rem 0;
+    border-color: transparent var(--secondary) transparent transparent;
+    position: absolute;
+    right: 100%;
+    bottom: calc(50% - 0.5rem);
+    width: 0;
+    height: 0;
+  }
+  
+  sup {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  sup span {
+    cursor: default;
+    background: #ecf0f1;
+    border: 0.125rem solid var(--blue);
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin: 0 0 0.7rem -1rem;
+    width: 12rem;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  sup span::before {
+    content: '';
+    border-style: solid;
+    border-width: 0.7rem 0.7rem 0rem;
+    border-color: var(--blue) transparent transparent transparent;
+    position: absolute;
+    left: 0.7rem;
+    bottom: -0.7rem;
+    width: 0;
+    height: 0;
+  }
+  
+  sup:hover span {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.35s;
+  }
+  
+  .footnotes {
+    margin: 10rem auto;
+  }
+  
+  #footnote:target {
+    background: #ecf0f1;
+  }
+  
+  
+  /*=====  End of Tootltips and Citations  ======*/
+  
+  
+  /*=============================================
+  =            Notification Bars            =
+  =============================================*/
+  
+  .modal {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  .modal:target {
+    background: rgba(0,0,0,0.75);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background 0.5s;
+  }
+  
+  .modal:target .content {
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: rgba(255,255,255,0.25) 0 0 0 0.5rem;
+    width: 30rem;
+    padding: 2rem;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 15rem);
+  }
+  
+  .modal:target .close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+  }
+  
+  .modal:target .close a {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    text-indent: 2rem;
+    overflow: hidden;
+    background: var(--blue);
+    border-radius: 50%;
+    border: 0.125rem solid var(--white);
+  }
+  
+  .modal:target .close:after {
+    content: 'X';
+    font-weight: 800;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .notification {
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: -100%;
+    background: linear-gradient(#1abc9c, #16a085);
+    border-bottom: 0.125rem solid #1abc9c;
+    box-shadow: rgba(0,0,0,0.4) 0 0.25rem 0.25rem 0;
+  }
+  
+  .notification .content {
+    text-align: center;
+    color: var(--white);
+    text-shadow: rgba(0,0,0,0.5) 0 -0.05rem 0.05rem;
+  }
+  
+  .notification .close {
+    position: absolute;
+    top: calc(50% - 1rem);
+    right: 1rem;
+  }
+  
+  .notification .close a {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    text-indent: 2rem;
+    overflow: hidden;
+  }
+  
+  .notification .close:after {
+    content: 'X';
+    font-weight: 800;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .notification:target {
+    transition: all 0.5s;
+    margin-top: 0;
+  }
+  
+  .warning {
+    background: linear-gradient(#e74c3c, #c0392b);
+    border-bottom: 0.125rem solid #e74c3c;
+  }
+  /*=====  End of Notification Bars  ======*/
+  
+  
+
+
+/*=====  End of Equal Height Columns  ======*/
+
+
+/*=============================================
+=            Menu Style            =
+=============================================*/
+.menu{
+  height: 20vh;
+  margin-top: 70rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.text-align {
+text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+nav .menu-item {
+  height: 4rem;
+  line-height: 2rem;
+}
+
+nav .menu-item:last-of-type a {
+  border-right: 0;
+}
+
+nav .menu-item .fa {
+  display: block;
+  position: absolute;
+  left: 0;
+  background: rgba(163, 35, 194, 0.3);
+  height: 50%;
+  line-height: inherit;
+  width: 3rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+nav a {
+  position: relative;
+  display: block;
+  padding-right: 2rem;
+  height: 100%;
+  background: rgba(163, 35, 194, 0.5);
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin: 0 1rem;
+}
+
+nav a p {
+  margin-left: 4.5em;
+}
+
+nav a::after {
+  content: "";
+  background: var(--primary);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  transition: all 0.5s;
+}
+
+.open-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.burger {
+  display: none;
+  font-size: 1.2rem;
+  position: relative;
+  background: var(--primary);
+  color: var(--white);
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.burger .fa {
+  pointer-events: none;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+@media (min-width: 992px) {
+  nav a:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+
+  nav a:hover .fa {
+    font-size: 1.25rem;
+    width: 3.6rem;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav a p {
+    margin-left: 1rem;
+    width: 0;
+    transition: margin-left 0.5s ease;
+  }
+  nav a:hover p {
+    margin-left: 4.5rem;
+    width: auto;
+    transition: margin-left 0.5s ease;
+  }
+
+  nav .menu-item .fa{
+    height: 100%;
+    line-height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .burger {
+    display: block;
+  }
+  .open-menu:checked + .burger {
+    background: var(--primary);
+    transition: background 0.5s;
+  }
+  .open-menu:checked + .burger + nav {
+    right: 0;
+    transition: all 0.5s;
+  }
+  nav {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    right: 100%;
+    flex-direction: column;
+    transition: all 0.5s;
+  }
+  nav div {
+    border-bottom: 0.25em solid #fff;
+  }
+  nav a {
+    border-right: 0;
+  }
+  nav a p{
+    margin-left: 4.5em;
+    width: auto;
+    transition: margin-left 0.5s ease;
+  }
+  nav a:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  nav a:hover .fa {
+    font-size: 1.25em;
+    width: 3.6em;
+    transition: all 0.5s;
+  }
+}
+
+/*=====  End of Menu Style  ======*/
+
+
+/*=============================================
+=            3D Cube            =
+=============================================*/
+.cube-section {
+  height: 100vh;
+  margin-top: 10rem;
+}
+
+
+.wrap {
+  z-index: -1;
+  text-align: center;
+}
+
+.rotate {
+  display: none;
+}
+
+.rotate-label {
+  display: inline-block;
+  margin-left: 0.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.rotate:checked + .rotate-label {
+  background: rgba(163, 35, 194, 0.5);
+}
+
+.perspective {
+  position: relative;
+  z-index: -1;
+  perspective: 2000px;
+  perspective-origin: 25rem -150px;
+}
+
+.cube {
+  position: relative;
+  width: 400px;
+  margin: 3.5rem auto;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+.cube div {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0.95;
+}
+
+.cube img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#rotate:checked ~ .perspective > .cube {
+  animation: rotate 10s infinite linear;
+}
+
+#front:checked ~ .perspective > .cube {
+  transform: rotateX(0deg) rotateY(0deg);
+  animation: none;
+}
+
+#left:checked ~ .perspective > .cube {
+  transform: rotateX(0deg) rotateY(90deg);
+  animation: none;
+}
+
+#back:checked ~ .perspective > .cube {
+  transform: rotateX(0deg) rotateY(180deg);
+  animation: none;
+}
+
+#right:checked ~ .perspective > .cube {
+  transform: rotateX(0deg) rotateY(270deg);
+  animation: none;
+}
+
+#top:checked ~ .perspective > .cube {
+  transform: rotateX(-90deg) rotateY(0) translateZ(200px) translateY(-200px);
+  animation: none;
+}
+
+#bottom:checked ~ .perspective > .cube {
+  transform: rotateX(90deg) rotateY(0) translateZ(-200px) translateY(-200px);
+  animation: none;
+}
+
+.front {
+  transform: translateZ(200px);
+}
+
+.back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-200px);
+  transform-origin: center left;
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(200px);
+  transform-origin: top right;
+}
+
+.top {
+  transform: rotateX(90deg) translateY(-200px);
+  transform-origin: top center;
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateY(200px);
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+/*=====  End of 3D Cube  ======*/
+
